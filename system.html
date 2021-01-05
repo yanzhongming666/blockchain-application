@@ -7,7 +7,7 @@
     <script type="text/javascript" src="./web3.min.js"></script>
     <link rel="stylesheet" href="app.css" />
     <meta name="viewport"
-        content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+          content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
     <title>基于区块链的信息共享寻人系统
     </title>
     <script>
@@ -18,33 +18,33 @@
 </head>
 
 <body>
-    <h2>基于区块链的信息共享寻人系统</h2>
-    <h3>用户界面</h3>
-    <button class="enableEthereumButton">启用以太坊</button>
-    <h5>账户: <span class="showAccount"></span>(您是用户)</h5>
-    <hr />
-    <div>
-        姓名：<input type="text" id="name" value="">
-        年龄：<input type="text" id="age" value="">
-        身份证：<input type="text" id="idC" value="">
-        更多：<input type="text" id="more" value="">
-        <button id="summitMe">提交</button>
+<h2>基于区块链的信息共享寻人系统</h2>
+<h3>寻人平台</h3>
+<button class="enableEthereumButton">开始</button>
+<h5>账户: <span class="showAccount"></span></h5>
+<hr />
+<div>
+    失踪人姓名：<input type="text" id="name" value="">
+    失踪人年龄：<input type="text" id="age" value="">
+    失踪人身份证：<input type="text" id="idC" value="">
+    失踪人更多信息：<input type="text" id="more" value="">
+    <button id="summitMe">提交</button>
 
+</div>
+<hr>
+<div>
+    历史查询：<input type="text" id="nameFo" value="">
+    <button id="foundMess" onclick="show()">提交</button>
+    <div id="another" style="display: none;">
+        姓名：<span id="foName"></span>
+        <br>
+        年龄：<span id="foAge"></span>
+        <br>
+        身份证：<span id="foId"></span>
+        <br>
+        更多信息：<span id="foMore"></span>
     </div>
-    <hr>
-        <div>
-            查询：<input type="text" id="nameFo" value="">
-            <button id="foundMess" onclick="show()">提交</button>
-            <div id="another" style="display: none;">
-                姓名：<span id="foName"></span>
-                <br>
-                年龄：<span id="foAge"></span>
-                    <br>
-                身份证：<span id="foId"></span>
-                    <br>
-                更多信息：<span id="foMore"></span>
-            </div>
-        </div>
+</div>
 </body>
 <script type="text/javascript" src="./app.js"></script>
 </html>

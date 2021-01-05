@@ -3,28 +3,25 @@ console.log("ERC720")
 let accounts = [];
 
 if (typeof window.ethereum !== 'undefined') {
-    console.log('MetaMask is installed!');
+	console.log('MetaMask is installed!');
 }
 
 console.log("isMetaMask：" + ethereum.isMetaMask)
 
 $(".enableEthereumButton").click(function () {
-    // alert("enableEthereumButton")
-    // ethereum.request({ method: 'eth_requestAccounts' });
-    getAccount()
 
-}
+		getAccount()
+
+	}
 )
 
 
 
 
 async function getAccount() {
-    accounts = await ethereum.request({ method: 'eth_requestAccounts' });
-    const account = accounts[0];
-    // showAccount.innerHTML = account;
-    $(".showAccount").html(account);
-    //kuaidi();
+	accounts = await ethereum.request({ method: 'eth_requestAccounts' });
+	const account = accounts[0];
+	$(".showAccount").html(account);
 }
 
 
@@ -158,11 +155,11 @@ $("#summitMe").click(function(){
 	alert("success");
 	var account = accounts[0];
 	console.log("提交信息中。。");
-    let _name = $("#name").val();
+	let _name = $("#name").val();
 	let _age = $("#age").val();
 	let _id = $("#idC").val();
 	let _more = $("#more").val();
-	
+
 	contract.methods.massage2(_name, _age, _id, _more).send({ from: account }).then(
 		function (result) {
 			console.log("result", result);
